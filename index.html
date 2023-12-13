@@ -12,10 +12,10 @@
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li>
-                {{mail}}
-            </li>
+        <ul v-if="mail.length === 10">
+            <li v-for="(item,i) in mail">
+                {{i+1}} - {{ item }}
+              </li>
         </ul>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
